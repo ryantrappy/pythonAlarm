@@ -47,7 +47,7 @@ sectimes=((int(time.time()))+68400)%86400
 mintimes = int(sectimes)-(int(sectimes)%60)
 print mintimes
 while secs != mintimes:
-	time.sleep(5)
+	time.sleep(1)
 	mintimes = currentTime()
 	print mintimes
 print "its time to wake up"
