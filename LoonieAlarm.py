@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 import sys
 import time
-import datetime
-import vlc
-import numpy as np
 import webbrowser
 import random
 
@@ -12,16 +9,6 @@ def currentTime():
 	sectimes=((int(time.time())+68400)%86400)
 	mintimes = int(sectimes)-(int(sectimes)%60)
 	return mintimes	 
-
-
-Instance = vlc.Instance()
-player = Instance.media_player_new()
-Media = Instance.media_new_path('./valley1.mov')
-player.set_media(Media)
-player.play()
-
-
-
 t = raw_input('What time would  you like to get up? ')
 if "pm" in t:
 	night=t.split("pm")
