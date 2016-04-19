@@ -5,6 +5,7 @@ import datetime
 import vlc
 import numpy as np
 import webbrowser
+import random
 
 
 def currentTime():
@@ -52,7 +53,13 @@ while secs != mintimes:
 	mintimes = currentTime()
 	print mintimes
 print "its time to wake up"
-webbrowser.open("https://www.youtube.com/watch?v=ITEXG22Y0MY&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE")
+videos=["https://www.youtube.com/watch?v=9x_FzCWl2nc&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE&index=3",
+	"https://www.youtube.com/watch?v=EykJCbu8jZw&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE&index=13",
+	"https://www.youtube.com/watch?v=9x_FzCWl2nc&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE&index=2",
+	"https://www.youtube.com/watch?v=4xOFGVD4yNI&index=25&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE",
+	"https://www.youtube.com/watch?v=ZJJHL5p9UIE&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE&index=44"]
+	
+webbrowser.open(videos[random.ranint(0,4)])
 
 
 #Instance = vlc.Instance()
