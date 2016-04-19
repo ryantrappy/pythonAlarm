@@ -51,7 +51,6 @@ print mintimes
 while secs != mintimes:
 	time.sleep(1)
 	mintimes = currentTime()
-	print mintimes
 print "its time to wake up"
 videos=["https://www.youtube.com/watch?v=9x_FzCWl2nc&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE&index=3",
 	"https://www.youtube.com/watch?v=EykJCbu8jZw&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE&index=13",
@@ -60,10 +59,3 @@ videos=["https://www.youtube.com/watch?v=9x_FzCWl2nc&list=PL7spvnQF9O-ia-SPOzQNR
 	"https://www.youtube.com/watch?v=ZJJHL5p9UIE&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE&index=44"]
 	
 webbrowser.open(videos[random.ranint(0,4)])
-
-
-#Instance = vlc.Instance()
-#player = Instance.media_player_new()
-#Media = Instance.media_new_path('./valley1.mov')
-#player.set_media(Media)
-#player.play()
