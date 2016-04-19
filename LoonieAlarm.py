@@ -4,6 +4,7 @@ import time
 import datetime
 import vlc
 import numpy as np
+import webbrowser
 
 
 def currentTime():
@@ -51,9 +52,11 @@ while secs != mintimes:
 	mintimes = currentTime()
 	print mintimes
 print "its time to wake up"
+webbrowser.open("https://www.youtube.com/watch?v=ITEXG22Y0MY&list=PL7spvnQF9O-ia-SPOzQNReIJH4xH8bVWE")
 
-Instance = vlc.Instance()
-player = Instance.media_player_new()
-Media = Instance.media_new_path('./valley1.mov')
-player.set_media(Media)
-player.play()
+
+#Instance = vlc.Instance()
+#player = Instance.media_player_new()
+#Media = Instance.media_new_path('./valley1.mov')
+#player.set_media(Media)
+#player.play()
