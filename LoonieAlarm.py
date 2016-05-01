@@ -45,4 +45,4 @@ videos=["/Users/Ryantrapp/Desktop/Optum/test.mp4",
 	"/Users/Ryantrapp/Desktop/Optum/test.mp4",
 	"/Users/Ryantrapp/Desktop/Optum/test.mp4"]
 	
-subprocess.Popen(['open',videos[random.ranint(0,4)])
+subprocess.Popen(['open',videos[random.randint(0,4)])
