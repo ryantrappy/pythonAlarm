@@ -2,22 +2,14 @@
 import sys
 import time
 import datetime
-import vlc
-import numpy as np
+import subprocess
+
 
 
 def currentTime():
 	sectimes=((int(time.time())+68400)%86400)
 	mintimes = int(sectimes)-(int(sectimes)%60)
 	return mintimes	 
-
-
-Instance = vlc.Instance()
-player = Instance.media_player_new()
-Media = Instance.media_new_path('./valley1.mov')
-player.set_media(Media)
-player.play()
-
 
 
 t = raw_input('What time would  you like to get up? ')
@@ -41,19 +33,16 @@ else :
 	else:
 		secs=(int(morn[0])*60*60)	
 
-print secs
-
 sectimes=((int(time.time()))+68400)%86400
 mintimes = int(sectimes)-(int(sectimes)%60)
-print mintimes
 while secs != mintimes:
 	time.sleep(1)
 	mintimes = currentTime()
-	print mintimes
-print "its time to wake up"
 
-Instance = vlc.Instance()
-player = Instance.media_player_new()
-Media = Instance.media_new_path('./valley1.mov')
-player.set_media(Media)
-player.play()
+videos=["/Users/Ryantrapp/Desktop/Optum/test.mp4",
+	"/Users/Ryantrapp/Desktop/Optum/test.mp4",
+	"/Users/Ryantrapp/Desktop/Optum/test.mp4",
+	"/Users/Ryantrapp/Desktop/Optum/test.mp4",
+	"/Users/Ryantrapp/Desktop/Optum/test.mp4"]
+	
+subprocess.Popen(['open',videos[random.ranint(0,4)])
